@@ -1,0 +1,17 @@
+DELETE FROM `stock` WHERE `store_id`='7';
+DELETE FROM `stock_position` WHERE `store_id`='7';
+INSERT INTO `stock` (`stock_id`, `stock_code`, `stock_name`,`store_id`, `stock_count`) VALUES(1,'PROV-200','rice','7',0),(9,'SUG-2749','dangote sugar','7',0),(11,'ONS-111','Titus Sardine','7',0),(13,'PROV-50','Laser Oil','7',0),(14,'ONS-023','Nothern fresh onions','7',0),(15,'PROV-25','Dangote Spagetti','7',0);
+INSERT INTO `stock_position` ( `stock_id`, `store_id`, `unit`, `stock_count`) VALUES(1,'7',1,0),(9,'7',1,0),(11,'7',1,0),(13,'7',1,0),(14,'7',1,0),(15,'7',1,0);
+UPDATE `stock` SET `stock`.`stock_count`=2341230 WHERE `stock`.`store_id`='7' AND `stock`.`stock_id`='1';
+UPDATE `stock` SET `stock`.`stock_count`=3435301 WHERE `stock`.`store_id`='7' AND `stock`.`stock_id`='9';
+UPDATE `stock` SET `stock`.`stock_count`=55901457 WHERE `stock`.`store_id`='7' AND `stock`.`stock_id`='11';
+UPDATE `stock` SET `stock`.`stock_count`=342486 WHERE `stock`.`store_id`='7' AND `stock`.`stock_id`='13';
+UPDATE `stock` SET `stock`.`stock_count`=346101 WHERE `stock`.`store_id`='7' AND `stock`.`stock_id`='14';
+UPDATE `stock` SET `stock`.`stock_count`=2177704 WHERE `stock`.`store_id`='7' AND `stock`.`stock_id`='15';
+UPDATE `stock_position` SET `stock_position`.`stock_count`=2341230 WHERE `stock_position`.`store_id`='7' AND `stock_position`.`stock_id`='1';
+UPDATE `stock_position` SET `stock_position`.`stock_count`=3435301 WHERE `stock_position`.`store_id`='7' AND `stock_position`.`stock_id`='9';
+UPDATE `stock_position` SET `stock_position`.`stock_count`=55901457 WHERE `stock_position`.`store_id`='7' AND `stock_position`.`stock_id`='11';
+UPDATE `stock_position` SET `stock_position`.`stock_count`=342486 WHERE `stock_position`.`store_id`='7' AND `stock_position`.`stock_id`='13';
+UPDATE `stock_position` SET `stock_position`.`stock_count`=346101 WHERE `stock_position`.`store_id`='7' AND `stock_position`.`stock_id`='14';
+UPDATE `stock_position` SET `stock_position`.`stock_count`=2177704 WHERE `stock_position`.`store_id`='7' AND `stock_position`.`stock_id`='15';
+INSERT INTO `store_daily_summary` ( `store_id`, `opening_balance`, `total_cash_in`, `total_cash_out`, `total_credit_sales`, `closing_balance`, `date`,  `time`) VALUES('7',0,0,0,0,0,'2016-03-02','05:20:29');
